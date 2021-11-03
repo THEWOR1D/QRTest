@@ -13,27 +13,41 @@
             height:100%;
         }
         @keyframes myfirst{
-            from{opacity: 0;}
-            to{opacity: 1;}
+            0% {opacity: 100};
+            1% {opacity: 0;}
+            100%{opacity: 0};
+        }
+        @keyframes my2nd{
+            0% {opacity: 0};
+            1% {opacity: 100};
+            2% {opacity: 0};
+            100%{opacity: 0};
         }
         p{
-            /*animation: myfirst 2s infinite;*/
-            animation-iteration-count: 5; 
+            animation: myfirst 2s infinite;
+            /*animation-iteration-count: 5;*/ 
             font-size: 100px;
             position: absolute;
             width: 100%;
             text-align: center;
-            
-
+        }
+        #st1{
+            animation: myfirst 2s infinite;
+        }
+        #nd2{
+            animation: myfirst 1s infinite;
+        }
+        #rd3{
+            animation: myfirst 3s infinite;
         }
         </style>
     </head>
 <body>
-<audio src = "./music/猫中毒.mp3" controls="controls">
+<audio src = "./music/猫中毒.mp3" controls="controls" autoplay = "autoplay" loop = "loop">
 </audio>
 <h1>嘉然Diana</h1>
-<p>测试用</p>
-<p>问题不大</p>
-<p>我真的很牛</p>
+<p id = st1>测试用</p>
+<p id = nd2>问题不大</p>
+<p id = rd3>我真的很牛</p>
 </body>
 </html>
